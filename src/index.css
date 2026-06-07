@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
 :root {
   /* Backgrounds */
   --background: #f7f9fb;
   --surface: #ffffff;
   --surface-muted: #eff1f3;
+  --footer-bg: #f3f4f6;
 
   /* Text */
   --text-primary: #1a1c1e;
@@ -38,5 +49,5 @@
   --radius-lg: 20px;
 
   /* Layout */
-  --container-width: 1200px;
+  --container-width: 1800px;
 }
