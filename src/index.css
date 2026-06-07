@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --background: #f7f9fb;
+  --surface: #ffffff;
+  --surface-muted: #eff1f3;
+
+  /* Text */
+  --text-primary: #1a1c1e;
+  --text-secondary: #43474e;
+
+  /* Updated Borders */
+  --border: #e5e7eb; /* Standard borders for cards and containers */
+  --border-light: #f1f5f9; /* Subtle separation for headers */
+  --border-subtle: #f3f4f6; /* Minimalist dividers for data tables */
+
+  /* Brand */
+  --primary: #b61822;
+  --primary-hover: #dc2626;
+
+  /* Status */
+  --error: #ba1a1a;
+
+  /* Pokemon Types */
+  --type-fire: #ef4444;
+  --type-water: #3b82f6;
+  --type-electric: #eab308;
+  --type-grass: #22c55e;
+  --type-ghost: #6366f1;
+  --type-poison: #a33ea1;
+  --type-steel: #b7b7ce;
+  --type-normal: #94a3b8;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Layout */
+  --container-width: 1200px;
+}
