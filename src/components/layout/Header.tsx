@@ -7,7 +7,9 @@ export default function Header() {
         Pokèdex
       </a>
 
-      <SearchBar variant="header" />
+      <div className="w-full max-w-[300px]">
+        <SearchBar variant="header" />
+      </div>
     </div>
   );
 }
