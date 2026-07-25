@@ -3,6 +3,8 @@ import Footer from "./components/layout/Footer";
 import SearchBar from "./components/search/SearchBar";
 import DashboardTitle from "./components/layout/DashboardTitle";
 import FeaturedPokemon from "./components/pokemon/FeaturedPokemon";
+import { useEffect } from "react";
+import PopularPokemons from "./components/pokemon/PopularPokemons";
 
 const dummyPokemon = {
   name: "Pikachu",
@@ -24,6 +26,15 @@ const dummyPokemon = {
 };
 
 export default function App() {
+  useEffect(() => {
+    const fetchPokemon = async () => {
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+      const data = await response.json();
+      console.log(data);
+    };
+    fetchPokemon();
+  }, []);
+
   return (
     <div className="mx-auto flex min-h-screen max-w-(--container-width) flex-col text-(--text-primary)">
       <Header />
@@ -33,6 +44,7 @@ export default function App() {
           <SearchBar variant="main" />
         </div>
         <FeaturedPokemon pokemon={dummyPokemon} />
+        <PopularPokemons />
       </main>
       <Footer />
     </div>

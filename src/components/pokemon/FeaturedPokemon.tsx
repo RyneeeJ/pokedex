@@ -1,4 +1,4 @@
-import { Badge } from "../ui/badge";
+import PokemonBasicDetails from "./PokemonBasicDetails";
 
 type Pokemon = {
   name: string;
@@ -19,6 +19,11 @@ type Pokemon = {
 };
 
 export default function FeaturedPokemon({ pokemon }: { pokemon: Pokemon }) {
+  const baseDetails = {
+    id: pokemon.id,
+    name: pokemon.name,
+    types: pokemon.types,
+  };
   return (
     <div className="border-border mx-auto flex max-w-5xl rounded-lg border">
       <div className="aspect-square w-2/5">
@@ -29,26 +34,7 @@ export default function FeaturedPokemon({ pokemon }: { pokemon: Pokemon }) {
         />
       </div>
       <div className="flex-1 space-y-8 bg-white p-8">
-        <div className="space-y-2">
-          {/* ID */}
-          <span className="mb-1 text-[#855300]">
-            #{pokemon.id.toString().padStart(3, "0")}
-          </span>
-          {/* Name */}
-          <div className="text-2xl font-bold">{pokemon.name}</div>
-          {/* Types */}
-          <div className="flex gap-2">
-            {pokemon.types.map((type) => (
-              <Badge
-                style={{ backgroundColor: `var(--type-${type.toLowerCase()})` }}
-                className="px-3 py-2.5"
-                key={type}
-              >
-                {type.toUpperCase()}
-              </Badge>
-            ))}
-          </div>
-        </div>
+        <PokemonBasicDetails baseDetails={baseDetails} size="lg" />
 
         {/* Details */}
         <div className="border-border flex gap-12 border-t border-b py-4">
