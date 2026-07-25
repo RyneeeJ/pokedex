@@ -20,8 +20,8 @@ export default function PokemonBasicDetails({
     },
     lg: {
       name: "text-2xl",
-      badge: "px-3 py-2.5 text-base",
-      id: "text-[16px]",
+      badge: "px-3 py-2.5 text-sm",
+      id: "text-[14px]",
       space: "space-y-2",
     },
   };
