@@ -25,6 +25,9 @@ export default function PokemonBasicDetails({
       space: "space-y-2",
     },
   };
+
+  const capitalizedName =
+    baseDetails.name.charAt(0).toUpperCase() + baseDetails.name.slice(1);
   return (
     <div className={sizeStyles[size].space}>
       {/* ID */}
@@ -33,7 +36,7 @@ export default function PokemonBasicDetails({
       </span>
       {/* Name */}
       <div className={`font-bold ${sizeStyles[size].name}`}>
-        {baseDetails.name}
+        {capitalizedName}
       </div>
       {/* Types */}
       <div className="flex gap-2">

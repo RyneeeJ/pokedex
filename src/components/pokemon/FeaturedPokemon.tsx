@@ -1,24 +1,7 @@
 import PokemonBasicDetails from "./PokemonBasicDetails";
 import FeaturedPokemonBaseStats from "./FeaturedPokemonBaseStats";
 import PokemonPhysicalAttributes from "./PokemonPhysicalAttributes";
-
-type Pokemon = {
-  name: string;
-  id: number;
-  types: string[];
-  height: number;
-  weight: number;
-  abilities: string[];
-  baseStats: {
-    hp: number;
-    attack: number;
-    defense: number;
-    specialAttack: number;
-    specialDefense: number;
-    speed: number;
-  };
-  image: string;
-};
+import type { Pokemon } from "@/lib/types/pokemon";
 
 export default function FeaturedPokemon({ pokemon }: { pokemon: Pokemon }) {
   const baseDetails = {
@@ -56,7 +39,7 @@ export default function FeaturedPokemon({ pokemon }: { pokemon: Pokemon }) {
         </div>
 
         {/* Base stats */}
-        <FeaturedPokemonBaseStats />
+        <FeaturedPokemonBaseStats baseStats={pokemon.baseStats} />
       </div>
     </div>
   );

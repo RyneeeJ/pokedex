@@ -4,7 +4,13 @@ export default function BaseStatsField({
   stat,
   value,
 }: {
-  stat: "HP" | "Attack" | "Defense" | "Speed";
+  stat:
+    | "hp"
+    | "attack"
+    | "defense"
+    | "specialattack"
+    | "specialdefense"
+    | "speed";
   value: number;
 }) {
   return (
